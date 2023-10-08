@@ -17,18 +17,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $query = "SELECT * FROM uzivatele WHERE login='$username'";
     $result = $conn->query($query);
-
-
         $row = $result->fetch_assoc();
         if (password_verify($password, $row["heslo"])) {
+            ob_start();
             $_SESSION["loginx"] = $username;
             echo "Vítej! $username !!!!";
             header("Location: pro_registrovane.php"); // Redirect
-
+            exit();
         } else {            
             echo "Chybné přihlašovací údaje pro účet $username";            
         }
-
     $conn->close();
-}
-?>
+}?>	
