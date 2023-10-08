@@ -1,7 +1,6 @@
 -- phpMyAdmin SQL Dump
 -- version 3.5.8.2
 -- http://www.phpmyadmin.net
---
 -- Počítač: Top.secret.cz
 -- Verze serveru: 10.3.32-MariaDB-log
 -- Verze PHP: 5.4.23
